@@ -293,6 +293,79 @@
     margin-top:4px;
   }
 
+  .slideshow{
+    position:relative;
+    display:grid;
+    gap:18px;
+    margin-top:32px;
+  }
+  .slide-track{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 24px 50px rgba(16,35,63,0.14);
+    min-height:260px;
+    background:var(--paper);
+  }
+  .slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity .7s ease;
+  }
+  .slide.active{opacity:1;}
+  .slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .slide-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:rgba(16,35,63,0.9);
+    color:#fff;
+    padding:10px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    font-family:var(--font-mono);
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    z-index:2;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .slide-btn:hover{transform:translateY(-50%) scale(1.02); background:rgba(16,35,63,1);}
+  .slide-btn.prev{left:16px;}
+  .slide-btn.next{right:16px;}
+  .slide-indicators{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:6px;
+  }
+  .indicator{
+    width:12px;
+    height:12px;
+    background:var(--line);
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .indicator.active,
+  .indicator:hover{background:var(--ink); transform:scale(1.1);}
+
+  @media (max-width:760px){
+    .slideshow{margin-top:24px;}
+    .slide-track{min-height:220px;}
+    .slide-btn{padding:9px 12px; font-size:0.78rem;}
+    .slide-btn.prev{left:10px;}
+    .slide-btn.next{right:10px;}
+  }
+
   .badges{
     display:flex; flex-wrap:wrap; gap:8px;
     margin:20px 0 22px;
@@ -595,6 +668,39 @@
     </div>
   </section>
 
+  <!-- PREVIOUS STUDENTS -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Previous students</p>
+        <h2>Success from real sessions</h2>
+      </div>
+
+      <div class="slideshow reveal" aria-label="Previous student work slideshow">
+        <div class="slide-track">
+          <div class="slide active">
+            <img src="https://ibsuman13-ui.github.io/cv/img1.jpg" alt="Student example 1">
+          </div>
+          <div class="slide">
+            <img src="https://ibsuman13-ui.github.io/cv/img2.jpg" alt="Student example 2">
+          </div>
+          <div class="slide">
+            <img src="https://ibsuman13-ui.github.io/cv/img3.jpg" alt="Student example 3">
+          </div>
+        </div>
+
+        <button class="slide-btn prev" type="button" aria-label="Previous image">Prev</button>
+        <button class="slide-btn next" type="button" aria-label="Next image">Next</button>
+
+        <div class="slide-indicators" aria-label="Slideshow navigation">
+          <button type="button" class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+          <button type="button" class="indicator" data-slide="1" aria-label="Slide 2"></button>
+          <button type="button" class="indicator" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PHILOSOPHY / MATRIX -->
   <section>
     <div class="wrap">
@@ -784,6 +890,59 @@
       );
       window.location.href = 'mailto:REPLACE_WITH_YOUR_EMAIL@example.com?subject=' + subject + '&body=' + body;
     });
+  }
+
+  // Previous students slideshow
+  const studentSlides = document.querySelectorAll('.slide');
+  const studentIndicators = document.querySelectorAll('.indicator');
+  const prevSlide = document.querySelector('.slide-btn.prev');
+  const nextSlide = document.querySelector('.slide-btn.next');
+  let studentIndex = 0;
+  let studentTimer;
+
+  function showStudentSlide(index) {
+    studentSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    studentIndicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+    studentIndex = index;
+  }
+
+  function changeStudentSlide(delta) {
+    const nextIndex = (studentIndex + delta + studentSlides.length) % studentSlides.length;
+    showStudentSlide(nextIndex);
+  }
+
+  function resetStudentTimer() {
+    clearInterval(studentTimer);
+    studentTimer = setInterval(() => changeStudentSlide(1), 5500);
+  }
+
+  if (studentSlides.length) {
+    studentIndicators.forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        showStudentSlide(Number(indicator.dataset.slide));
+        resetStudentTimer();
+      });
+    });
+
+    if (prevSlide) {
+      prevSlide.addEventListener('click', () => {
+        changeStudentSlide(-1);
+        resetStudentTimer();
+      });
+    }
+
+    if (nextSlide) {
+      nextSlide.addEventListener('click', () => {
+        changeStudentSlide(1);
+        resetStudentTimer();
+      });
+    }
+
+    resetStudentTimer();
   }
 </script>
 
