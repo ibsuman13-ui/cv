@@ -274,14 +274,17 @@
   }
   .avatar{
     width:140px; height:140px; border-radius:22px;
-    background:linear-gradient(155deg, var(--ink) 0%, var(--ink-soft) 70%);
-    color:var(--gold-soft);
-    display:flex; align-items:center; justify-content:center;
-    font-family:var(--font-display);
-    font-size:2.6rem; font-weight:600;
+    overflow:hidden;
     box-shadow:0 12px 30px -10px rgba(16,35,63,0.35);
+    flex:none;
   }
-  @media (min-width:800px){ .avatar{width:180px; height:180px; border-radius:26px; font-size:3.2rem;} }
+  .avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  @media (min-width:800px){ .avatar{width:180px; height:180px; border-radius:26px;} }
   .about-name{font-size:1.5rem; margin-top:20px; color:var(--ink);}
   .about-title{
     font-family:var(--font-mono);
@@ -534,8 +537,8 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <p class="eyebrow">IBDP Business Management · HL &amp; SL</p>
-      <h1>Study with the examiner who writes the <em>mark scheme</em>.</h1>
-      <p class="lede">One-to-one online tutoring from an IB Examiner, IA Moderator, and 18-year classroom veteran &mdash; built to move your grade, not just your confidence.</p>
+      <h1>Master <em>IBDP BUSINESS MANAGMENT</em>.</h1>
+      <p class="lede">One-to-one online tutoring from an IB Examiner, IA Moderator, and 18-year classroom expereience &mdash; built to move your grade, not just your confidence.</p>
 
       <div class="hero-ctas">
         <a class="btn btn-whatsapp" href="https://wa.me/919983920500?text=Hi%20Suman%2C%20I%27m%20interested%20in%20IBDP%20Business%20Management%20tutoring." target="_blank" rel="noopener">
@@ -568,7 +571,9 @@
     <div class="wrap">
       <div class="about-grid reveal">
         <div>
-          <div class="avatar" aria-hidden="true">SS</div>
+          <div class="avatar" aria-hidden="true">
+            <img src="https://ibsuman13-ui.github.io/cv/Suman%20Singh_.jpeg" alt="Suman Singh" loading="lazy">
+          </div>
         </div>
         <div>
           <p class="eyebrow">Your tutor</p>
