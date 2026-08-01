@@ -1,81 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IB BM Online Tutor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suman Singh — IBDP Business Management Tutor</title>
+<meta name="description" content="One-to-one online tutoring in IBDP Business Management (HL &amp; SL) from an IB Examiner and IA Moderator with 18 years of teaching experience.">
+<meta name="theme-color" content="#10233F">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+<!-- Open Graph -->
+<meta property="og:title" content="Suman Singh — IBDP Business Management Tutor">
+<meta property="og:description" content="Study with the examiner who writes the mark scheme. One-to-one IBDP Business Management tutoring, HL &amp; SL.">
+<meta property="og:type" content="website">
 
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 30px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 
-        main {
-            padding: 40px;
-        }
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2310233F'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23B8863C' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
 
-        .button {
-            display: inline-block;
-            background-color: #0077cc;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
+<style>
+  :root{
+    --ink:#10233F;
+    --ink-soft:#1B3357;
+    --paper:#EEF1F5;
+    --paper-alt:#E3E8F0;
+    --card:#FFFFFF;
+    --gold:#B8863C;
+    --gold-soft:#E9D8B6;
+    --green:#2F7A5C;
+    --whatsapp:#25D366;
+    --slate:#4C5A6B;
+    --slate-light:#7C8A9A;
+    --line:#D9DFE7;
+    --radius:16px;
+    --maxw:1120px;
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
 
-        .button:hover {
-            background-color: #005fa3;
-        }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
 
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            background-color: #003366;
-            color: white;
-        }
-    </style>
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:72px; /* space for mobile sticky bar */
+  }
+  @media (min-width:900px){ body{ padding-bottom:0; } }
+
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.12; margin:0;}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin:0 0 10px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px; height:2px;
+    background:var(--gold);
+    display:inline-block;
+  }
+
+  p{margin:0 0 1em; color:var(--slate);}
+  .lede{font-size:1.08rem; color:var(--ink-soft);}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:50px;
+    padding:0 24px;
+    border-radius:999px;
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:0.98rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-primary{background:var(--ink); color:#fff;}
+  .btn-primary:hover{background:var(--ink-soft);}
+  .btn-whatsapp{background:var(--whatsapp); color:#fff;}
+  .btn-whatsapp:hover{box-shadow:0 6px 18px rgba(37,211,102,.35);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .btn svg{width:18px; height:18px; flex:none;}
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,241,245,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 20px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    text-decoration:none; color:var(--ink);
+  }
+  .brand-mark{
+    width:36px; height:36px; border-radius:9px;
+    background:var(--ink);
+    color:var(--gold);
+    font-family:var(--font-display);
+    font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1rem;
+    flex:none;
+  }
+  .brand-text{
+    font-family:var(--font-mono);
+    font-size:0.78rem;
+    line-height:1.25;
+    letter-spacing:0.01em;
+  }
+  .brand-text strong{display:block; font-size:0.85rem; color:var(--ink);}
+  .brand-text span{color:var(--slate-light);}
+  .nav-cta{display:none;}
+  @media (min-width:640px){ .nav-cta{display:inline-flex;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:56px 0 48px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(180deg, transparent 0%, var(--paper) 100%),
+      var(--hero-path);
+    background-repeat:no-repeat;
+    background-position:center bottom;
+    background-size:cover;
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .hero h1{
+    font-size:clamp(2.05rem, 6.4vw, 3.55rem);
+    color:var(--ink);
+    max-width:15ch;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 em{color:var(--gold); font-style:normal;}
+  .hero .lede{
+    max-width:52ch;
+    margin-top:18px;
+    font-size:clamp(1rem, 1.6vw + .6rem, 1.18rem);
+  }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap:12px;
+    margin-top:26px;
+  }
+  .trust-line{
+    margin-top:16px;
+    font-family:var(--font-mono);
+    font-size:0.78rem;
+    color:var(--slate-light);
+    display:flex; align-items:center; gap:8px;
+  }
+  .dot-live{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--green);
+    display:inline-block;
+    box-shadow:0 0 0 3px rgba(47,122,92,0.18);
+  }
+
+  /* Grade band strip */
+  .grade-strip{
+    margin-top:40px;
+    max-width:480px;
+  }
+  .grade-strip-label{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    color:var(--slate);
+    margin-bottom:8px;
+    letter-spacing:0.03em;
+  }
+  .grade-bar{
+    display:flex;
+    gap:4px;
+  }
+  .grade-cell{
+    flex:1;
+    height:34px;
+    border-radius:6px;
+    background:var(--paper-alt);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono);
+    font-size:0.78rem;
+    color:var(--slate-light);
+    border:1px solid var(--line);
+    transition:transform .4s ease, background .4s ease, color .4s ease;
+    transform:scaleY(0.6);
+    transform-origin:bottom;
+  }
+  .grade-cell.lit{
+    background:var(--ink);
+    color:var(--gold-soft);
+    border-color:var(--ink);
+    transform:scaleY(1);
+  }
+  .grade-cell.top{
+    background:var(--gold);
+    color:var(--ink);
+    border-color:var(--gold);
+    font-weight:700;
+    transform:scaleY(1);
+  }
+  .grade-strip.in-view .grade-cell{transform:scaleY(1);}
+  .grade-strip-caption{
+    margin-top:8px;
+    font-size:0.82rem;
+    color:var(--slate-light);
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:64px 0;}
+  .section-alt{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section-head{max-width:60ch; margin-bottom:36px;}
+  .section-head h2{font-size:clamp(1.55rem, 3.2vw + .5rem, 2.3rem); color:var(--ink);}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in-view{opacity:1; transform:none;}
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    gap:32px;
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  @media (min-width:800px){
+    .about-grid{grid-template-columns:220px 1fr; gap:48px;}
+  }
+  .avatar{
+    width:140px; height:140px; border-radius:22px;
+    background:linear-gradient(155deg, var(--ink) 0%, var(--ink-soft) 70%);
+    color:var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display);
+    font-size:2.6rem; font-weight:600;
+    box-shadow:0 12px 30px -10px rgba(16,35,63,0.35);
+  }
+  @media (min-width:800px){ .avatar{width:180px; height:180px; border-radius:26px; font-size:3.2rem;} }
+  .about-name{font-size:1.5rem; margin-top:20px; color:var(--ink);}
+  .about-title{
+    font-family:var(--font-mono);
+    font-size:0.82rem;
+    color:var(--slate);
+    margin-top:4px;
+  }
+
+  .badges{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin:20px 0 22px;
+  }
+  .badge{
+    font-family:var(--font-mono);
+    font-size:0.74rem;
+    padding:7px 12px;
+    border-radius:999px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .badge.gold{
+    background:rgba(184,134,60,0.1);
+    border-color:rgba(184,134,60,0.4);
+    color:#8a641f;
+  }
+
+  /* ---------- Matrix (signature element) ---------- */
+  .matrix-wrap{
+    display:grid;
+    gap:36px;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:900px){
+    .matrix-wrap{grid-template-columns:1fr 1fr; align-items:center;}
+  }
+  .matrix-copy p{max-width:48ch;}
+  .callout{
+    margin-top:22px;
+    padding:16px 18px;
+    border-left:3px solid var(--gold);
+    background:rgba(184,134,60,0.07);
+    border-radius:0 10px 10px 0;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .callout strong{color:var(--ink);}
+
+  .matrix{
+    position:relative;
+    max-width:420px;
+    margin:0 auto;
+    aspect-ratio:1/1;
+    padding:34px 16px 40px 40px;
+  }
+  .matrix-axis-y{
+    position:absolute; left:0; top:8px; bottom:34px;
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    font-family:var(--font-mono);
+    font-size:0.68rem;
+    color:var(--slate);
+    display:flex; align-items:center; justify-content:center;
+    letter-spacing:0.04em;
+  }
+  .matrix-axis-x{
+    position:absolute; left:40px; right:16px; bottom:6px;
+    text-align:center;
+    font-family:var(--font-mono);
+    font-size:0.68rem;
+    color:var(--slate);
+    letter-spacing:0.04em;
+  }
+  .matrix-grid{
+    position:relative;
+    width:100%; height:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .matrix-cell{
+    position:relative;
+    padding:10px 12px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    font-size:0.7rem;
+    color:var(--slate-light);
+    line-height:1.35;
+  }
+  .matrix-cell.q-hh{
+    background:var(--ink);
+    color:var(--gold-soft);
+  }
+  .matrix-dot{
+    position:absolute;
+    width:14px; height:14px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 0 6px rgba(184,134,60,0.25);
+    top:20%; left:22%;
+    opacity:0;
+    transform:scale(0.4);
+    transition:opacity .5s ease .2s, transform .5s ease .2s;
+  }
+  .matrix.in-view .matrix-dot{opacity:1; transform:scale(1);}
+  .matrix-dot-label{
+    position:absolute;
+    top:calc(20% + 18px); left:calc(22% - 6px);
+    font-family:var(--font-mono);
+    font-size:0.62rem;
+    color:var(--ink);
+    background:var(--gold-soft);
+    padding:2px 6px;
+    border-radius:5px;
+    white-space:nowrap;
+    opacity:0;
+    transition:opacity .5s ease .4s;
+  }
+  .matrix.in-view .matrix-dot-label{opacity:1;}
+
+  /* ---------- Process steps ---------- */
+  .steps{
+    display:grid;
+    gap:18px;
+    grid-template-columns:1fr;
+    counter-reset:step;
+  }
+  @media (min-width:700px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media (min-width:1000px){ .steps{grid-template-columns:repeat(5,1fr);} }
+  .step{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 18px;
+    counter-increment:step;
+  }
+  .step-num{
+    font-family:var(--font-mono);
+    font-size:0.75rem;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .step h3{font-size:1rem; color:var(--ink); margin-bottom:6px;}
+  .step p{font-size:0.88rem; margin:0;}
+
+  /* ---------- IA / email capture ---------- */
+  .ia-card{
+    background:var(--ink);
+    color:#fff;
+    border-radius:20px;
+    padding:36px 26px;
+    display:grid;
+    gap:22px;
+  }
+  @media (min-width:800px){
+    .ia-card{grid-template-columns:1.1fr 1fr; align-items:center; padding:44px;}
+  }
+  .ia-card h2{color:#fff; font-size:clamp(1.4rem, 2.6vw + .5rem, 2rem);}
+  .ia-card p{color:#C7D0DC;}
+  .ia-form{
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .ia-form input{
+    height:50px;
+    border-radius:12px;
+    border:1.5px solid rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.06);
+    color:#fff;
+    padding:0 16px;
+    font-family:var(--font-body);
+    font-size:0.95rem;
+  }
+  .ia-form input::placeholder{color:#8FA0B5;}
+  .ia-form input:focus{
+    outline:2px solid var(--gold);
+    outline-offset:2px;
+    border-color:transparent;
+  }
+  .ia-form .btn{width:100%;}
+  .form-note{font-size:0.76rem; color:#8FA0B5; margin-top:4px;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{
+    display:grid; gap:16px;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:760px){ .contact-grid{grid-template-columns:1.2fr .8fr;} }
+  .contact-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+  }
+  .contact-list{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:14px;}
+  .contact-list li{display:flex; align-items:center; gap:12px; font-size:0.95rem;}
+  .contact-list svg{width:20px; height:20px; flex:none; color:var(--gold);}
+  .hours-row{display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.85rem; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:14px; margin-top:14px;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:32px 0 96px;
+    text-align:center;
+  }
+  @media (min-width:900px){ footer{padding:32px 0 40px;} }
+  footer p{font-size:0.82rem; color:var(--slate-light); margin:0;}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .mobile-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:var(--card);
+    border-top:1px solid var(--line);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    display:flex;
+  }
+  .mobile-cta .btn{flex:1;}
+  @media (min-width:900px){ .mobile-cta{display:none;} }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:2px;
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>IB BM Online Tutor</h1>
-        <p>Helping IB Business Management students achieve top scores.</p>
-    </header>
+<header class="site-nav">
+  <div class="nav-row wrap">
+    <a href="#top" class="brand">
+      <span class="brand-mark">SS</span>
+      <span class="brand-text"><strong>Suman Singh</strong><span>IBDP Business Management</span></span>
+    </a>
+    <a class="btn btn-whatsapp nav-cta" href="https://wa.me/919983920500?text=Hi%20Suman%2C%20I%27m%20interested%20in%20IBDP%20Business%20Management%20tutoring." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.3 8.6 8.8 7.4 8.6 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.6 15 3 13.5 3 12c0-4.9 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
 
-    <main>
-        <h2>Welcome!</h2>
-        <p>
-            Personalized online tutoring for IB Business Management (SL & HL).
-        </p>
+<main id="top">
 
-        <h3>Why Choose Me?</h3>
-        <ul style="display:inline-block; text-align:left;">
-            <li>Experienced IB Business Management Tutor</li>
-            <li>Exam-focused lessons</li>
-            <li>Case study practice</li>
-            <li>IA and EE guidance</li>
-        </ul>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">IBDP Business Management · HL &amp; SL</p>
+      <h1>Study with the examiner who writes the <em>mark scheme</em>.</h1>
+      <p class="lede">One-to-one online tutoring from an IB Examiner, IA Moderator, and 18-year classroom veteran &mdash; built to move your grade, not just your confidence.</p>
 
-        <br>
-
-        <a href="mailto:your@email.com" class="button">
-            Book a Free Trial
+      <div class="hero-ctas">
+        <a class="btn btn-whatsapp" href="https://wa.me/919983920500?text=Hi%20Suman%2C%20I%27m%20interested%20in%20IBDP%20Business%20Management%20tutoring." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.3 8.6 8.8 7.4 8.6 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.6 15 3 13.5 3 12c0-4.9 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+          Message Suman on WhatsApp
         </a>
-    </main>
+        <a class="btn btn-ghost" href="#how-it-works">See how sessions work</a>
+      </div>
 
-    <footer>
-        © 2026 IB BM Online Tutor | All Rights Reserved
-    </footer>
+      <p class="trust-line"><span class="dot-live" aria-hidden="true"></span> Currently taking new students &middot; replies within a day</p>
+
+      <div class="grade-strip" id="gradeStrip">
+        <p class="grade-strip-label">IB BUSINESS MANAGEMENT GRADE SCALE (1&ndash;7)</p>
+        <div class="grade-bar">
+          <div class="grade-cell">1</div>
+          <div class="grade-cell">2</div>
+          <div class="grade-cell">3</div>
+          <div class="grade-cell">4</div>
+          <div class="grade-cell">5</div>
+          <div class="grade-cell">6</div>
+          <div class="grade-cell top">7</div>
+        </div>
+        <p class="grade-strip-caption">Where insider assessment knowledge is aimed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="about-grid reveal">
+        <div>
+          <div class="avatar" aria-hidden="true">SS</div>
+        </div>
+        <div>
+          <p class="eyebrow">Your tutor</p>
+          <h2 class="about-name">Suman Singh</h2>
+          <p class="about-title">IBDP Educator &middot; Business Management &amp; IGCSE Business Studies</p>
+
+          <div class="badges">
+            <span class="badge gold">18 years teaching</span>
+            <span class="badge">IB Examiner &middot; 2017&ndash;Present</span>
+            <span class="badge">IA Moderator &middot; 2018&ndash;Present</span>
+            <span class="badge">IBEN Program Leader</span>
+            <span class="badge">IB Exchange Content Creator</span>
+            <span class="badge">IPN Inspire Award 2021</span>
+          </div>
+
+          <p>With 18 years of teaching experience specialising in IBDP Business Management (HL &amp; SL) and IGCSE Business Studies, Suman brings first-hand assessment expertise as an active IB Examiner, IA Moderator, and IBEN Program Leader. As a content creator for IB Exchange and a 2021 IPN Inspire Awards recipient for Global Honors in School Education, she pairs insider mark-scheme knowledge with teaching methods built for how students actually learn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / MATRIX -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Teaching philosophy</p>
+        <h2>Exam technique meets real understanding.</h2>
+      </div>
+
+      <div class="matrix-wrap">
+        <div class="matrix-copy reveal">
+          <p>Plenty of students learn business theory. Fewer learn how to turn it into a top-band exam response. Every session combines the two: interactive lessons, real-world case studies, and continuous feedback, so concepts stick and responses score.</p>
+          <div class="callout">
+            <strong>Insider knowledge, used directly.</strong> As an active IB Examiner, Suman knows exactly what separates a 5 from a 7 &mdash; and teaches that difference explicitly, not as an afterthought.
+          </div>
+        </div>
+
+        <div class="matrix reveal" id="matrix">
+          <span class="matrix-axis-y">EXAM TECHNIQUE</span>
+          <div class="matrix-grid">
+            <div class="matrix-cell">Exam tricks, shaky theory</div>
+            <div class="matrix-cell q-hh">
+              Consistently top-band responses
+              <span class="matrix-dot" aria-hidden="true"></span>
+              <span class="matrix-dot-label">Suman&rsquo;s approach</span>
+            </div>
+            <div class="matrix-cell">Memorisation, no application</div>
+            <div class="matrix-cell">Strong theory, weak scoring</div>
+          </div>
+          <span class="matrix-axis-x">CONCEPTUAL UNDERSTANDING &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-alt" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Getting started</p>
+        <h2>How sessions work</h2>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <p class="step-num">01</p>
+          <h3>Message on WhatsApp</h3>
+          <p>Share your school, level (HL or SL), and where you&rsquo;re currently stuck.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">02</p>
+          <h3>Quick diagnostic</h3>
+          <p>A short intro chat to gauge your current understanding and target grade.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">03</p>
+          <h3>Personalised plan</h3>
+          <p>A syllabus map built around your exam dates and weakest topics.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">04</p>
+          <h3>Weekly sessions</h3>
+          <p>Live online lessons using real case studies and past-paper practice.</p>
+        </div>
+        <div class="step">
+          <p class="step-num">05</p>
+          <h3>Marked feedback</h3>
+          <p>Every response marked against the real IB rubric, examiner-style.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IA CONSULTATION -->
+  <section>
+    <div class="wrap">
+      <div class="ia-card reveal">
+        <div>
+          <p class="eyebrow" style="color:var(--gold);">Need personalised IA guidance?</p>
+          <h2>Get your Internal Assessment on track.</h2>
+          <p>Book a one-on-one session for tailored feedback on your research question, methodology, and analysis &mdash; before it costs you marks.</p>
+        </div>
+        <form class="ia-form" id="iaForm">
+          <label for="iaEmail" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Email address</label>
+          <input type="email" id="iaEmail" name="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary" style="background:var(--gold); color:var(--ink);">Request IA consultation</button>
+          <p class="form-note">This opens a pre-filled email to Suman &mdash; no account needed.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Book your first session.</h2>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-card">
+          <p class="lede" style="margin:0;">Every student needs something different. Tell Suman what you&rsquo;re hoping a tutor can do for you, and she&rsquo;ll start building a plan around it.</p>
+          <a class="btn btn-whatsapp" style="margin-top:20px;" href="https://wa.me/919983920500?text=Hi%20Suman%2C%20I%27m%20interested%20in%20IBDP%20Business%20Management%20tutoring." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.3 8.6 8.8 7.4 8.6 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.6 15 3 13.5 3 12c0-4.9 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <p class="about-title" style="margin:0 0 4px;">IB BUSINESS MANAGEMENT TUTOR</p>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919983920500">+91 99839 20500</a>
+            </li>
+          </ul>
+          <div class="hours-row">
+            <span>Session hours</span>
+            <span>4:30 pm &ndash; 9:30 pm IST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Suman Singh &middot; IBDP Business Management Tutor. All rights reserved.</p>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-whatsapp" href="https://wa.me/919983920500?text=Hi%20Suman%2C%20I%27m%20interested%20in%20IBDP%20Business%20Management%20tutoring." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.3 8.6 8.8 7.4 8.6 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.6 15 3 13.5 3 12c0-4.9 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+    Message on WhatsApp
+  </a>
+</div>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const gradeStrip = document.getElementById('gradeStrip');
+  const matrixEl = document.getElementById('matrix');
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealEls.forEach(el => io.observe(el));
+    if (gradeStrip) io.observe(gradeStrip);
+    if (matrixEl) io.observe(matrixEl);
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view'));
+    if (gradeStrip) gradeStrip.classList.add('in-view');
+    if (matrixEl) matrixEl.classList.add('in-view');
+  }
+
+  // Grade bar staggered lighting once in view
+  const gradeCells = document.querySelectorAll('.grade-cell');
+  const gradeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        gradeCells.forEach((cell, i) => {
+          setTimeout(() => cell.classList.add('lit'), i * 70);
+        });
+        gradeObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  if (gradeStrip) gradeObserver.observe(gradeStrip);
+
+  // IA form -> mailto (static-site friendly, no backend required)
+  const iaForm = document.getElementById('iaForm');
+  if (iaForm) {
+    iaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('iaEmail').value.trim();
+      const subject = encodeURIComponent('IA Consultation Request');
+      const body = encodeURIComponent(
+        'Hi Suman,\n\nI would like to book an IA consultation session.\n\nMy email: ' + email + '\n\nThanks!'
+      );
+      window.location.href = 'mailto:REPLACE_WITH_YOUR_EMAIL@example.com?subject=' + subject + '&body=' + body;
+    });
+  }
+</script>
 
 </body>
 </html>
